@@ -21,7 +21,7 @@ class SameTreeTest extends BaseTableDrivenTest {
                                                            Some(TreeNode(3, None, None))),                                 true),
   )
 
-  test("should ") {
+  test("should validate the same tree ") {
     forAll(table)((treeNode: TreeNode,
                    treeNodeToComapre: TreeNode,
                    expectedResult: Boolean
