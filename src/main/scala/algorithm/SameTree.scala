@@ -7,11 +7,6 @@ import scala.concurrent.{Await, Future}
 //Given two binary trees, write a function to check if they are equal or not.
 //Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
 
-case class TreeNode(_value: Int,
-                    left: Option[TreeNode],
-                    right: Option[TreeNode]
-                   )
-
 object SameTree {
 
   def apply(p: TreeNode, q: TreeNode): Boolean = Await.result(compareTo(p, q), Duration.Inf)
