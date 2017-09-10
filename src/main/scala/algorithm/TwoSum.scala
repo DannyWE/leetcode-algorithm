@@ -7,13 +7,12 @@ object TwoSum {
 //  return [0, 1].
 
   def apply(nums: Array[Int], target: Int): Option[List[Int]] = {
-    val indexNums = nums.zipWithIndex
-    var another: Int = 0
-    indexNums.collectFirst {
-      case t if indexNums.exists(ele => {
-        another = ele._2
-        ele._1 != t._1 && (t._1 + ele._1) == target
-      }) => List(t._2, another)
+    var findIndex: Int = 0
+    nums.view.zipWithIndex.collectFirst {
+      case t if nums.view.zipWithIndex.exists(ele => {
+        findIndex = ele._2
+        ele._1 + t._1 == target
+      }) => List(t._2, findIndex)
     }
   }
 }
