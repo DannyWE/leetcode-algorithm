@@ -7,23 +7,23 @@ class SameTreeTest extends BaseTableDrivenTest {
   val table = Table(
     ("Tree",                                               "Tree to Compare",                                             "Expected Result"),
 
-    (TreeNode(3, None, None),                              TreeNode(3, None, None),                                        true),
-    (TreeNode(3, None, None),                              TreeNode(4, None, None),                                        false),
-    (TreeNode(3, None, None),                              TreeNode(4, Some(TreeNode(3, None, None)), None),               false),
-    (TreeNode(3, Some(TreeNode(3, None, None)), None),     TreeNode(3, Some(TreeNode(3, None, None)), None),               true),
-    (TreeNode(3, Some(TreeNode(3, None, None)),
-      Some(TreeNode(3, None, None))),                      TreeNode(3, Some(TreeNode(3, None, None)), None),               false),
-    (TreeNode(3, Some(TreeNode(3, None, None)),
-      Some(TreeNode(3, None, None))),                      TreeNode(3, Some(TreeNode(3, None, None)),
-                                                           Some(TreeNode(7, None, None))),                                 false),
-    (TreeNode(3, Some(TreeNode(3, None, None)),
-      Some(TreeNode(3, None, None))),                      TreeNode(3, Some(TreeNode(3, None, None)),
-                                                           Some(TreeNode(3, None, None))),                                 true),
+    (BinaryTree(3, None, None),                              BinaryTree(3, None, None),                                        true),
+    (BinaryTree(3, None, None),                              BinaryTree(4, None, None),                                        false),
+    (BinaryTree(3, None, None),                              BinaryTree(4, Some(BinaryTree(3, None, None)), None),               false),
+    (BinaryTree(3, Some(BinaryTree(3, None, None)), None),     BinaryTree(3, Some(BinaryTree(3, None, None)), None),               true),
+    (BinaryTree(3, Some(BinaryTree(3, None, None)),
+      Some(BinaryTree(3, None, None))),                      BinaryTree(3, Some(BinaryTree(3, None, None)), None),               false),
+    (BinaryTree(3, Some(BinaryTree(3, None, None)),
+      Some(BinaryTree(3, None, None))),                      BinaryTree(3, Some(BinaryTree(3, None, None)),
+                                                           Some(BinaryTree(7, None, None))),                                 false),
+    (BinaryTree(3, Some(BinaryTree(3, None, None)),
+      Some(BinaryTree(3, None, None))),                      BinaryTree(3, Some(BinaryTree(3, None, None)),
+                                                           Some(BinaryTree(3, None, None))),                                 true),
   )
 
   test("should validate the same tree ") {
-    forAll(table)((treeNode: TreeNode,
-                   treeNodeToComapre: TreeNode,
+    forAll(table)((treeNode: BinaryTree,
+                   treeNodeToComapre: BinaryTree,
                    expectedResult: Boolean
                   ) => {
           SameTree(treeNode, treeNodeToComapre) should equal(expectedResult)
