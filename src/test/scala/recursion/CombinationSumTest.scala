@@ -1,6 +1,7 @@
-package algorithm
+package recursion
 
 import infrastructure.BaseTableDrivenTest
+import recurision.CombinationSum
 
 class CombinationSumTest extends BaseTableDrivenTest {
 

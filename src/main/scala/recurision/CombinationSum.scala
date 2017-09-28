@@ -1,6 +1,5 @@
-package algorithm
+package recurision
 
-import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer
 
 //Given a set of candidate numbers (C) (without duplicates) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
@@ -20,7 +19,11 @@ object CombinationSum {
     listBuffer.toList
   }
 
-  def findMatched(sortedList: List[Int], target: Int, j: Int, acc: List[Int], listBuffer: ListBuffer[List[Int]]): Unit = {
+  def findMatched(sortedList: List[Int],
+                  target: Int,
+                  j: Int,
+                  acc: List[Int],
+                  listBuffer: ListBuffer[List[Int]]): Unit = {
     if (target == 0) {
       listBuffer += acc
       return
