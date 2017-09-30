@@ -1,4 +1,4 @@
-package algorithm.tree;
+package dataStructure.tree;
 
 
 import java.util.Scanner;
