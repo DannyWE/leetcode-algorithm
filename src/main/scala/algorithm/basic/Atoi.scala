@@ -1,6 +1,4 @@
-package algorithm
-
-//https://leetcode.com/problems/string-to-integer-atoi/description/
+package algorithm.basic
 
 object Atoi {
   def apply(s: String): Int = {

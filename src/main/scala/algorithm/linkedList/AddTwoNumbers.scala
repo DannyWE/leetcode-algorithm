@@ -1,4 +1,11 @@
-package algorithm
+package algorithm.linkedList
+
+/*
+https://leetcode.com/problems/add-two-numbers/hints/
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+ */
 
 object AddTwoNumbers {
   def apply(x1: List[Int], x2: List[Int]): List[Int] = {

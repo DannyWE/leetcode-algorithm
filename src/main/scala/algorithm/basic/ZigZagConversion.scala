@@ -1,4 +1,4 @@
-package algorithm
+package algorithm.basic
 
 //https://leetcode.com/problems/zigzag-conversion/description/
 

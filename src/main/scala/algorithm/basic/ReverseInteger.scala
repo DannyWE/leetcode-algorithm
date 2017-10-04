@@ -1,4 +1,8 @@
-package algorithm
+package algorithm.basic
+
+/*
+https://leetcode.com/problems/reverse-integer/description/
+ */
 
 import scala.util.{Success, Try}
 

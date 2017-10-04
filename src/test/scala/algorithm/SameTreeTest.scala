@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.tree.{BinaryTree, SameTree}
 import infrastructure.BaseTableDrivenTest
 
 class SameTreeTest extends BaseTableDrivenTest {

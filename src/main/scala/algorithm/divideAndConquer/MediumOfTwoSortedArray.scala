@@ -1,4 +1,4 @@
-package algorithm
+package algorithm.divideAndConquer
 
 object MediumOfTwoSortedArray {
   def apply(list1: Array[Int],

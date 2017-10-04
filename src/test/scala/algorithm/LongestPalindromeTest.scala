@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.hashtable.LongestPalindrome
 import infrastructure.BaseTableDrivenTest
 
 class LongestPalindromeTest extends BaseTableDrivenTest {

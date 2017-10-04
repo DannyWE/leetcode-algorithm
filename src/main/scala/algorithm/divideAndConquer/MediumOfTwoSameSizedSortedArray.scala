@@ -1,4 +1,4 @@
-package algorithm
+package algorithm.divideAndConquer
 
 import infrastructure.ErrorOr
 

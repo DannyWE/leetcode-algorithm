@@ -1,4 +1,4 @@
-package algorithm
+package dataStructure.hashtable
 
 //Longest Substring Without Repeating Characters
 //REF: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/

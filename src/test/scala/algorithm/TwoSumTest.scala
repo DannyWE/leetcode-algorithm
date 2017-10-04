@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.hashtable.TwoSum
 import infrastructure.BaseTableDrivenTest
 
 class TwoSumTest extends BaseTableDrivenTest {

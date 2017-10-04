@@ -1,4 +1,4 @@
-package algorithm
+package dataStructure.hashtable
 
 object TwoSum {
 

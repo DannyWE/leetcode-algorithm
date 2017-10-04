@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.linkedList.AddTwoNumbers
 import infrastructure.BaseTableDrivenTest
 
 class AddTwoNumbersTest extends BaseTableDrivenTest {

@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.basic.Atoi
 import infrastructure.BaseTableDrivenTest
 
 class AtoiTest extends BaseTableDrivenTest {

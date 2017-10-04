@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.tree.{BinaryTree, ValidBST}
 import infrastructure.BaseTableDrivenTest
 
 class ValidBSTTest extends BaseTableDrivenTest {

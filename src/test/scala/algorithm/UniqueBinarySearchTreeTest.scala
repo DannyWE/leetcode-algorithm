@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.tree.UniqueBinarySearchTree
 import infrastructure.BaseTableDrivenTest
 
 class UniqueBinarySearchTreeTest extends BaseTableDrivenTest {

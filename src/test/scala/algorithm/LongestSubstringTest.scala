@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.hashtable.LongestSubstring
 import infrastructure.BaseTableDrivenTest
 
 class LongestSubstringTest extends BaseTableDrivenTest {

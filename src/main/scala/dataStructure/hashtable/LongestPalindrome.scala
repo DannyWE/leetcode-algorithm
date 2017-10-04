@@ -1,4 +1,4 @@
-package algorithm
+package dataStructure.hashtable
 
 //https://leetcode.com/problems/longest-palindromic-substring/description/
 //Input: "babad"
@@ -7,7 +7,7 @@ package algorithm
 
 object LongestPalindrome {
   def apply(s: String): String = {
-    s.toArray.foldLeft(Result("", "", false))((acc, ele) => {
+    s.toArray.foldLeft(Result("", "", done = false))((acc, ele) => {
       acc match {
         case t@Result("", _, false) => t.copy(longestStr = ele.toString)
         case t@Result(longestStr, _, false)

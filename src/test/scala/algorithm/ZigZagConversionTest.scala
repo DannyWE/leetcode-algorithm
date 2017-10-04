@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.basic.ZigZagConversion
 import infrastructure.BaseTableDrivenTest
 
 class ZigZagConversionTest extends BaseTableDrivenTest {

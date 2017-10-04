@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.divideAndConquer.MediumOfTwoSameSizedSortedArray
 import infrastructure.{BaseTableDrivenTest, ErrorOr}
 
 class MediumOfTwoSameSizedSortedArrayTest extends BaseTableDrivenTest {

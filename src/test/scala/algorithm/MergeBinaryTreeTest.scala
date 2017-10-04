@@ -1,5 +1,6 @@
 package algorithm
 
+import dataStructure.tree.{BinaryTree, MergeBinaryTree}
 import infrastructure.BaseTableDrivenTest
 
 class MergeBinaryTreeTest extends BaseTableDrivenTest {

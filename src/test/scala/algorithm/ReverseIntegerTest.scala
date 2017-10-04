@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.basic.ReverseInteger
 import infrastructure.BaseTableDrivenTest
 
 class ReverseIntegerTest extends BaseTableDrivenTest {
@@ -14,7 +15,6 @@ class ReverseIntegerTest extends BaseTableDrivenTest {
 
   test("should ") {
     forAll(table)((number: Int, reversedNumber: Int) => {
-      Integer.MAX_VALUE
       ReverseInteger(number) should equal(reversedNumber)
     })
   }

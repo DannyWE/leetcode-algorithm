@@ -1,4 +1,4 @@
-package algorithm
+package dataStructure.tree
 
 object ValidBST {
   def apply(root: BinaryTree): Boolean = {

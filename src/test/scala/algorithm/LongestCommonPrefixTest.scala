@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.basic.LongestCommonPrefix
 import infrastructure.BaseTableDrivenTest
 
 class LongestCommonPrefixTest extends BaseTableDrivenTest {

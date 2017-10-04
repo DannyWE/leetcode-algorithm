@@ -1,3 +1,10 @@
+/*
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+
+Input:Digit string "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+ */
+
 take = (digits) => {
     const mapping = {
         2: ['a', 'b' ,'c'],

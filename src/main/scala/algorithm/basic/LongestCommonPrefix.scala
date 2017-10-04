@@ -1,4 +1,4 @@
-package algorithm
+package algorithm.basic
 
 object LongestCommonPrefix {
   def apply(strList: List[String]): String = {

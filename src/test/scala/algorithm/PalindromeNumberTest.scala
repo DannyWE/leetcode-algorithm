@@ -1,5 +1,6 @@
 package algorithm
 
+import algorithm.basic.PalindromeNumber
 import infrastructure.BaseTableDrivenTest
 
 class PalindromeNumberTest extends BaseTableDrivenTest {
