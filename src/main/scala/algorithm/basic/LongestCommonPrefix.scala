@@ -1,5 +1,9 @@
 package algorithm.basic
 
+/*
+https://leetcode.com/problems/longest-common-prefix/description/
+ */
+
 object LongestCommonPrefix {
   def apply(strList: List[String]): String = {
     findCommonPrefix(strList, 0, "")

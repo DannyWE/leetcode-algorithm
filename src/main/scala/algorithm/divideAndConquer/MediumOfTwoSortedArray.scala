@@ -1,5 +1,9 @@
 package algorithm.divideAndConquer
 
+/*
+https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+ */
+
 object MediumOfTwoSortedArray {
   def apply(list1: Array[Int],
             list1Length: Int,
