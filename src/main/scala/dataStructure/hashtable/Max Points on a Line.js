@@ -1,33 +1,57 @@
+/*
+https://leetcode.com/problems/max-points-on-a-line/description/
+
+i.e
+take([Point(3,4), Point(0,0), Point(1,1), Point(2,2), Point(3,3)])
+take([Point(3,4), Point(0,0), Point(1,1), Point(2,2), Point(3,3), Point(4, 9), Point(5, 14), Point(6, 19), Point(3, 6)])
+ */
+
 take = (points) => {
     const len = points.length;
+    const mid = Math.floor(len / 2);
     let result = [];
-    findMaximumLines(points, 0, len, [], result);
 
-    return maxBy(result);
-};
-
-findMaximumLines = (points, k, len, acc, result) => {
-
-    //TODO need workout
-    // for (let i = k; i < len; i++) {
-    //     if (acc.length <= 2) {
-    //         findMaximumLines(points, i, len, acc.concat(points(i)), result);
-    //     } else if (points.find(ele => sameLine(acc, points[i]))) {
-    //         acc.push(points[i]);
-    //     } else {
-    //         result.push(acc);
-    //         return;
-    //     }
-    //
-    // }
-};
-
-maxBy = (acc, func) => (acc.reduce((a, b) => {
-    if (func(a) >= func(b)) {
-        return a;
+    for (let i = 0; i < mid; i ++ ) {
+        for (let j = 0; j < len; j ++ ) {
+            findMaximumLines(points, len, [points[i], points[j]], result);
+        }
     }
-    return b;
-}));
+
+    return maxBy(result, t => t.length);
+};
+
+findMaximumLines = (points, len, acc, result) => {
+    let foundElement = points.find(ele => !contains(acc, ele) && sameLine(acc, ele));
+    if (foundElement) {
+        findMaximumLines(points, len, acc.concat(foundElement), result)
+    } else {
+        result.push(acc);
+    }
+};
+
+contains = (acc, ele) => {
+    let i = acc.length;
+    while (i--) {
+        if (JSON.stringify(acc[i]) === JSON.stringify(ele)) {
+            return true;
+        }
+    }
+    return false;
+};
+
+maxBy = (arr, func) => {
+    let result = [arr[0]];
+    const len = arr.length;
+    for (let i = 1 ; i < len ; i ++ ) {
+        if (func(result[0]) < func(arr[i])) {
+            result = [];
+            result.push(arr[i]);
+        } else if (func(result[0]) === func(arr[i])) {
+            result.push(arr[i])
+        }
+    }
+    return result;
+};
 
 sameLine = (points, point) => {
     if (points.length < 2) {
